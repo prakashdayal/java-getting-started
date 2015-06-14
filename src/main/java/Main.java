@@ -21,11 +21,11 @@ public class Main extends HttpServlet {
 
   private void showHome(HttpServletRequest req, HttpServletResponse resp)
       throws ServletException, IOException {
-        PrintWriter out = response.getWriter(  ); 
+       PrintWriter out = response.getWriter(); 
     response.setContentType("text/html"); 
-    out.println("User name <input type='text'/><br/>");
-     out.println("Password <input type='password'/><br/>");
- out.println("User name <input type='submit'/><br/>");
+    out.println("<H1>Hello from a Servlet</h2>"); 
+    out.println("<P>This servlet ran at "); 
+    out.println(new Date().toString()); 
 
    // resp.getWriter().print("User name <input type='text'/><br/>");
      
