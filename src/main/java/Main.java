@@ -21,10 +21,14 @@ public class Main extends HttpServlet {
 
   private void showHome(HttpServletRequest req, HttpServletResponse resp)
       throws ServletException, IOException {
-    resp.getWriter().print("User name <input type='text'/><br/>");
-     resp.getWriter().print("Password <input type='text'/><br/>");
-     resp.getWriter().print("<input type='Submit'/><br/>");
+        PrintWriter out = response.getWriter(  ); 
+    response.setContentType("text/html"); 
+    out.println("User name <input type='text'/><br/>");
+     out.println("Password <input type='password'/><br/>");
+ out.println("User name <input type='submit'/><br/>");
 
+   // resp.getWriter().print("User name <input type='text'/><br/>");
+     
   }
 
   private void showDatabase(HttpServletRequest req, HttpServletResponse resp)
